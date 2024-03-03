@@ -8,7 +8,7 @@ def find_good(path, dir):
             print(os.path.abspath(dpath))
 
         if os.path.isdir(dpath):
-            find(dpath, dir)
+            find_good(dpath, dir)
 
 
 def find(path, dir):

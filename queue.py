@@ -1,6 +1,5 @@
 class QueueError(LookupError):  # Choose base class for the new exception.
-    def __init__(self):
-        LookupError.__init__(self)
+    pass
 
 
 class Queue:
@@ -25,8 +24,8 @@ class Queue:
 
 
 class SuperQueue(Queue):
-    def __init__(self):
-        Queue.__init__(self)
+#    def __init__(self):
+#        Queue.__init__(self)
 
     def isempty(self):
         return len(self._Queue__queue_list) == 0

@@ -1,17 +1,18 @@
 import os
 
-file = input("Please enter the file name to analize: ")
+file = input("Please enter the file name to analyze: ")
 
 char_freq_dict = {}
 try:
     fh = open(file, "rt")
-    ch = fh.read(1).lower()
+
+    ch = None
     while ch != '':
+        ch = fh.read(1).lower()
         if ch not in char_freq_dict.keys():
             char_freq_dict[ch] = 1
         else:
             char_freq_dict[ch] += 1
-        ch = fh.read(1).lower()
     fh.close()
 except IOError as e:
     print("An I/O problem occured during working with the file \"" + file + "\". Error message: " + os.strerror(e.errno))

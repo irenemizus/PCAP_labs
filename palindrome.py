@@ -13,10 +13,11 @@ def is_pal_check_v1(text):
 def is_pal_check_v2(text):
     if not text.isspace():
         text_simpl = text.lower().replace(' ', '')
-        len_half = len(text_simpl) // 2
-        text_half = text_simpl[:len_half]
-        text_half_rev = text_simpl[:len_half:-1]
-        if text_half != text_half_rev:
+#        len_half = len(text_simpl) // 2
+#        text_half = text_simpl[:len_half]
+#        text_half_rev = text_simpl[:len_half:-1]
+#        if text_half != text_half_rev:
+        if text_simpl[:] != text_simpl[::-1]:
             return False
     else:
         return False

@@ -7,9 +7,10 @@ def is_anag_check(str1, str2):
         ch_list_1_sort = sorted(char_list_1)
         char_list_2 = list(str2_simpl)
         ch_list_2_sort = sorted(char_list_2)
-        str1_sort = ''.join(ch_list_1_sort)
-        str2_sort = ''.join(ch_list_2_sort)
-        if str1_sort != str2_sort:
+#        str1_sort = ''.join(ch_list_1_sort)
+#        str2_sort = ''.join(ch_list_2_sort)
+#        if str1_sort != str2_sort:
+        if ch_list_1_sort != ch_list_2_sort:
             return False
     else:
         return False

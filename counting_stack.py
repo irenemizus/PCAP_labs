@@ -13,7 +13,6 @@ class Stack:
 
 class CountingStack(Stack):
     def __init__(self):
-        #
         Stack.__init__(self)
         self.__counter = 0
 
@@ -22,7 +21,7 @@ class CountingStack(Stack):
 
     def pop(self):
         self.__counter += 1
-        Stack.pop(self)
+        return Stack.pop(self)
 
 
 stk = CountingStack()
